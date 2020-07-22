@@ -9,6 +9,7 @@ import org.junit.Test;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
 
@@ -54,6 +55,21 @@ public class Sql2oDepartmentsDaoTest {
         assertNotEquals(originalId,department.getId());
     }
 
+    @Test
+    public void addUserToDepartment() {
+        Departments department=setUpNewDepartment();
+        sql2oDepartmentsDao.add(department);
+        Users user=setUpNewUser();
+        Users otherUser= new Users("Wachira","treasury","cash transfers");
+        sql2oUsersDao.add(user);
+        sql2oUsersDao.add(otherUser);
+        sql2oDepartmentsDao.addUserToDepartment(user,department);
+        sql2oDepartmentsDao.addUserToDepartment(otherUser,department);
+        assertEquals(2,sql2oDepartmentsDao.getAllUsersInDepartment(department.getId()).size());
+        assertEquals(2,sql2oDepartmentsDao.findById(department.getId()).getSize());
+    }
+
+
 
 
 
@@ -61,7 +77,7 @@ public class Sql2oDepartmentsDaoTest {
         return new Departments("Kopaloans", "microfinance");
     }
 
-    private Users setUpNewUsers() {
+    private Users setUpNewUser() {
         return new Users("Maureen", "Manager", "Managing Director");
     }
 }
