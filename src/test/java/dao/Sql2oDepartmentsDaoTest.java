@@ -1,7 +1,17 @@
 package dao;
 
-import static org.junit.jupiter.api.Assertions.*;
+import models.Departments;
+import models.Users;
 
-class Sql2oDepartmentsDaoTest {
 
+public class Sql2oDepartmentsDaoTest {
+
+
+    private Departments setUpDepartment() {
+        return new Departments("Kopaloans", "microfinance");
+    }
+
+    private Users setUpNewUsers() {
+        return new Users("Maureen", "Manager", "Managing Director");
+    }
 }
