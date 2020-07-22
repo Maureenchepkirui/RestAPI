@@ -2,9 +2,14 @@ package dao;
 
 import models.Departments;
 import models.Users;
+import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Before;
+import org.junit.Test;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
+
+import static org.junit.Assert.assertNotEquals;
 
 
 public class Sql2oDepartmentsDaoTest {
@@ -28,9 +33,31 @@ public class Sql2oDepartmentsDaoTest {
 
     }
 
+    @After
+    public void tearDown() throws Exception {
+        sql2oDepartmentsDao.clearAll();
+        sql2oUsersDao.clearAll();
+        sql2oNewsDao.clearAll();
+        System.out.println("clearing database");
+    }
+    @AfterClass
+    public static void shutDown() throws Exception{
+        conn.close();
+        System.out.println("connection closed");
+    }
+
+    @Test
+    public void idSetForAddedDepartment() {
+        Departments department=setUpNewDepartment();
+        int originalId=department.getId();
+        sql2oDepartmentsDao.add(department);
+        assertNotEquals(originalId,department.getId());
+    }
 
 
-    private Departments setUpDepartment() {
+
+
+    private Departments setUpNewDepartment() {
         return new Departments("Kopaloans", "microfinance");
     }
 
