@@ -117,12 +117,6 @@ public class Sql2oDepartmentsDaoTest {
         assertEquals(department_news.getTitle(),sql2oDepartmentsDao.getDepartmentNews(department_news.getId()).get(0).getTitle());
     }
 
-
-
-
-
-
-
     private Departments setUpNewDepartment() {
         return new Departments("Kopaloans", "microfinance");
     }
