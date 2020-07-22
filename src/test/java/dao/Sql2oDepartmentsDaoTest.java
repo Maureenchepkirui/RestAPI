@@ -1,6 +1,8 @@
 package dao;
 
+import models.Department_News;
 import models.Departments;
+import models.News;
 import models.Users;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -100,6 +102,21 @@ public class Sql2oDepartmentsDaoTest {
         assertEquals(2,sql2oDepartmentsDao.getAllUsersInDepartment(department.getId()).size());
         assertEquals(2,sql2oDepartmentsDao.findById(department.getId()).getSize());
     }
+    @Test
+    public void getDepartmentNews() {
+        Users users=setUpNewUser();
+        sql2oUsersDao.add(users);
+        Departments departments=setUpNewDepartment();
+        sql2oDepartmentsDao.add(departments);
+        Department_News department_news =new Department_News("Meeting","To nominate new chairman",departments.getId()
+                ,users.getId());
+        sql2oNewsDao.addDepartmentNews(department_news);
+        News news=new News("Meeting","Meeting to set activities for team building",users.getId());
+        sql2oNewsDao.addNews(news);
+
+        assertEquals(department_news.getTitle(),sql2oDepartmentsDao.getDepartmentNews(department_news.getId()).get(0).getTitle());
+    }
+
 
 
 
