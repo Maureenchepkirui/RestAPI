@@ -1,6 +1,5 @@
 package dao;
 
-
 import models.Department_News;
 import models.Departments;
 import models.News;
@@ -12,9 +11,10 @@ import org.junit.Test;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
-class Sql2oNewsDaoTest {
+public class Sql2oNewsDaoTest {
+
     private static Sql2oDepartmentsDao sql2oDepartmentsDao;
     private static Sql2oUsersDao sql2oUsersDao;
     private static Sql2oNewsDao sql2oNewsDao;
@@ -22,6 +22,7 @@ class Sql2oNewsDaoTest {
 
     @Before
     public void setUp() throws Exception {
+
         String connectionString = "jdbc:postgresql://localhost:5432/organisational_news_portal_test";
         Sql2o sql2o = new Sql2o(connectionString, "maureenbett", "kenyan082bett");
         sql2oDepartmentsDao=new Sql2oDepartmentsDao(sql2o);
@@ -29,7 +30,9 @@ class Sql2oNewsDaoTest {
         sql2oNewsDao=new Sql2oNewsDao(sql2o);
         System.out.println("connected to database");
         conn=sql2o.open();
+
     }
+
     @After
     public void tearDown() throws Exception {
         sql2oDepartmentsDao.clearAll();
@@ -95,6 +98,11 @@ class Sql2oNewsDaoTest {
     @Test
     public void findById() {
     }
+
+    //helper
+//    private News setUpNewNews() {
+//        return new News("Meeting","Meeting to set activities for team building");
+//    }
     private Departments setUpDepartment() {
         return new Departments("Kopaloans","microfinance");
     }
@@ -103,6 +111,3 @@ class Sql2oNewsDaoTest {
     }
 
 }
-
-
-
