@@ -76,9 +76,6 @@ public class Sql2oNewsDaoTest {
 
     }
 
-
-
-
     @Test
     public void getAll() {
         Users users=setUpNewUsers();
