@@ -95,6 +95,14 @@ class Sql2oNewsDaoTest {
     @Test
     public void findById() {
     }
+    private Departments setUpDepartment() {
+        return new Departments("Kopaloans","microfinance");
+    }
+    private Users setUpNewUsers() {
+        return new Users("Maureen","Manager","Managing Director");
+    }
 
 }
+
+
 
