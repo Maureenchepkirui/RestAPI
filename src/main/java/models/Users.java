@@ -41,17 +41,20 @@ public class Users {
     public int getDepartmentId() {
         return departmentId;
     }
+    public void setDepartmentId(int departmentId) {
+        this.departmentId = departmentId;
+    }
 
     public void setId(int id) {
         this.id = id;
     }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Users users = (Users) o;
         return id == users.id &&
+                departmentId == users.departmentId &&
                 Objects.equals(name, users.name) &&
                 Objects.equals(position, users.position) &&
                 Objects.equals(staff_role, users.staff_role) ;
@@ -60,6 +63,6 @@ public class Users {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, position, staff_role);
+        return Objects.hash(id, name, position, staff_role,departmentId);
     }
 }
