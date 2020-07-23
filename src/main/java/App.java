@@ -5,8 +5,7 @@ import dao.Sql2oUsersDao;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
 
-import static spark.Spark.port;
-import static spark.Spark.staticFileLocation;
+import static spark.Spark.*;
 
 public class App {
     static int getHerokuAssignedPort() {
@@ -33,5 +32,18 @@ public class App {
         sql2oNewsDao=new Sql2oNewsDao(sql2o);
         sql2oUsersDao=new Sql2oUsersDao(sql2o);
         conn=sql2o.open();
+
+        //getting users in the department
+
+        get("/users", "application/json", (request, response) -> {
+
+            if(sql2oDepartmentsDao.getAll().size() > 0){
+                return gson.toJson(sql2oUsersDao.getAll());
+            }
+            else {
+                return "{\"message\":\"No users currently listed on the database.\"}";
+            }
+        });
+
     }
 }
