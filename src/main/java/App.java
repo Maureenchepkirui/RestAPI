@@ -97,7 +97,7 @@ public class App {
                 return gson.toJson(sql2oUsersDao.getAll());
             }
             else {
-                return "{\"message\":\" Sorry No users currently listed on the database.\"}";
+                return "{\"RESPONSE\":\"NO USERS CURRENTLY\"}";
             }
         });
 
