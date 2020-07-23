@@ -102,7 +102,7 @@ public class App {
         });
 
  //path to show departments
-        get("/departments","application/json",(request, response) -> {
+        get("/departments","application/json",(request, response) -> {//tested.............
             if(sql2oDepartmentsDao.getAll().size()>0){
                 return gson.toJson(sql2oDepartmentsDao.getAll());
             }
