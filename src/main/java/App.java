@@ -149,7 +149,7 @@ public class App {
                 return "{\"message\":\"I'm sorry, but department has no users.\"}";
             }
         });
-        get("/department/:id","application/json",(request, response) -> {
+        get("/department/:id","application/json",(request, response) -> {//works.......
             int id=Integer.parseInt(request.params("id"));
             if(sql2oDepartmentsDao.findById(id)==null){
                 throw new ApiException(404, String.format("No department with the id: %s exists",
@@ -159,7 +159,7 @@ public class App {
                 return gson.toJson(sql2oDepartmentsDao.findById(id));
             }
         });
-        get("/news/department/:id","application/json",(request, response) -> {
+        get("/news/department/:id","application/json",(request, response) -> {//works
 
             int id=Integer.parseInt(request.params("id"));
             Departments departments=sql2oDepartmentsDao.findById(id);
@@ -171,7 +171,7 @@ public class App {
                 return gson.toJson(sql2oDepartmentsDao.getDepartmentNews(id));
             }
             else {
-                return "{\"message\":\"I'm sorry, but no news in this department.\"}";
+                return "{\"RESPONSE\":\"THIS DEPARTMENT HAS NO NEWS CURRENTLY\"}";
             }
         });
 
