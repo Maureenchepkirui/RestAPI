@@ -1,7 +1,9 @@
-# <span style="background-color: #FFFF00">WILDLIFE TRACKER</span>
+## ORGANISATIONAL NEWS PORTAL
 
-## <span style="background-color: #FFFF00">Organisational News Portal is a REST API for querying and retrieving scoped news and information. There should be news/articles/posts that are available to all employees without navigating into any department, and others that are housed/classified within departments.</span>
-
+## DESCRIPTION
+````
+Organisational News Portal is a REST API for querying and retrieving scoped news and information. There should be news/articles/posts that are available to all employees without navigating into any department, and others that are housed/classified within departments.
+````
 
 ## AUTHOR
 ```bash
@@ -50,23 +52,23 @@ postgresql is installed
 Change databse creadentials to your credentials in the App.java and in the tests
 ````
 ## API DOCUMENTATION
-````
+
 | Url                                          | Http Verb  | Description |
-| :-----------------------------               |:---:| -------------------------:|
+| :--------------------------------------------|:---:| -------------------------:|
 | /users/new                                   |POST|     Add New Users  |
 | /departments/new                             |POST|     Add New Departments |
 |/add/user/:user_id/department/:department_id  |POST|     Add new Users to specific department|
 | /news/new/department                         |POST|     Adding News to a Department|
 | /news/new/general                            |POST|     Adding General News|
 |/users                                        |GET |     Display all users|
-| /departments                                 |GET|      Display all Departments|
+| /departments                                 |GET |      Display all Departments|
 |/news/general                                 |GET |     Display all general news|
 | /user/:id/departments                        |GET |     Get specific user in a department|
 | /user/:id                                    |GET |     Get a specific user|
 | /department/:id/users                        |GET |     Get users in a specific department|
 | /department/:id                              |GET |     Get specific departments|
-| /news/department/:id                          |GET |    Get news from a specific department|
-````
+| /news/department/:id                         |GET |    Get news from a specific department|
+
 
 ## CONTACT DETAILS
 ````
