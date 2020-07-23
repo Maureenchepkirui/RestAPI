@@ -54,6 +54,7 @@ public class App {
             response.status(201);
             return gson.toJson(departments);
         });
+        //adding general news in the department
 
         post("/news/new/general","application/json",(request, response) -> {
 
