@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="dao.Sql2oDepartmentsDaoTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2020-07-22T16:49:52" hostname="maureenbett-HP-EliteBook-8470p" time="4.414">
+<testsuite name="dao.Sql2oDepartmentsDaoTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2020-07-23T09:37:54" hostname="maureenbett-HP-EliteBook-8470p" time="1.158">
   <properties/>
-  <testcase name="addUserToDepartment" classname="dao.Sql2oDepartmentsDaoTest" time="3.022"/>
-  <testcase name="getAll" classname="dao.Sql2oDepartmentsDaoTest" time="0.183"/>
-  <testcase name="getDepartmentNews" classname="dao.Sql2oDepartmentsDaoTest" time="0.44"/>
-  <testcase name="idSetForAddedDepartment" classname="dao.Sql2oDepartmentsDaoTest" time="0.093"/>
-  <testcase name="getAllUsersInDepartment" classname="dao.Sql2oDepartmentsDaoTest" time="0.561"/>
-  <testcase name="correctDepartmentIsReturnedFindById" classname="dao.Sql2oDepartmentsDaoTest" time="0.115"/>
+  <testcase name="addUserToDepartment" classname="dao.Sql2oDepartmentsDaoTest" time="0.18"/>
+  <testcase name="getAll" classname="dao.Sql2oDepartmentsDaoTest" time="0.064"/>
+  <testcase name="getDepartmentNews" classname="dao.Sql2oDepartmentsDaoTest" time="0.121"/>
+  <testcase name="idSetForAddedDepartment" classname="dao.Sql2oDepartmentsDaoTest" time="0.236"/>
+  <testcase name="getAllUsersInDepartment" classname="dao.Sql2oDepartmentsDaoTest" time="0.483"/>
+  <testcase name="correctDepartmentIsReturnedFindById" classname="dao.Sql2oDepartmentsDaoTest" time="0.07"/>
   <system-out><![CDATA[connected to database
 clearing database
 connected to database
