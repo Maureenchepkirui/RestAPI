@@ -107,7 +107,7 @@ public class App {
                 return gson.toJson(sql2oDepartmentsDao.getAll());
             }
             else {
-                return "{\"message\":\"Sorry no departments currently listed on database.\"}";
+                return "{\"RESPONSE\":\"NO DEPARTMENTS CURRENTLY\"}";
             }
         });
         //path to get listed general news
