@@ -3,6 +3,7 @@ import dao.Sql2oDepartmentsDao;
 import dao.Sql2oNewsDao;
 import dao.Sql2oUsersDao;
 import org.sql2o.Connection;
+import org.sql2o.Sql2o;
 
 import static spark.Spark.port;
 import static spark.Spark.staticFileLocation;
@@ -15,6 +16,7 @@ public class App {
         }
         return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
     }
+
     public static void main(String[] args) {
 
         port(getHerokuAssignedPort());
@@ -24,4 +26,12 @@ public class App {
         Connection conn;
         Gson gson = new Gson();
         staticFileLocation("/public");
+
+        String connectionString = "jdbc:postgresql://localhost:5432/organisational_news_portal";
+        Sql2o sql2o = new Sql2o(connectionString, "maureenbett", "kenyan082bett");
+        sql2oDepartmentsDao=new Sql2oDepartmentsDao(sql2o);
+        sql2oNewsDao=new Sql2oNewsDao(sql2o);
+        sql2oUsersDao=new Sql2oUsersDao(sql2o);
+        conn=sql2o.open();
+    }
 }
