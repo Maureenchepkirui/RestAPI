@@ -8,12 +8,14 @@ public class Users {
     private  String name;
     private String position;
     private String staff_role;
+    private int departmentId;
 
 
-    public Users(String name, String position, String staff_role) {
+    public Users(String name, String position, String staff_role,int departmentId) {
         this.name = name;
         this.position = position;
         this.staff_role = staff_role;
+        this.departmentId = departmentId;
 
     }
 
@@ -22,15 +24,22 @@ public class Users {
     }
 
     public String getName() {
+
         return name;
     }
 
-    public String getPosition() {
+    public String getPosition()
+    {
         return position;
     }
 
     public String getStaff_role() {
+
         return staff_role;
+    }
+
+    public int getDepartmentId() {
+        return departmentId;
     }
 
     public void setId(int id) {
