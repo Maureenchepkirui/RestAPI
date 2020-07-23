@@ -41,7 +41,25 @@ public class App {
                 return gson.toJson(sql2oUsersDao.getAll());
             }
             else {
-                return "{\"message\":\"No users currently listed on the database.\"}";
+                return "{\"message\":\" Sorry No users currently listed on the database.\"}";
+            }
+        });
+        //path to show departments
+        get("/departments","application/json",(request, response) -> {
+            if(sql2oDepartmentsDao.getAll().size()>0){
+                return gson.toJson(sql2oDepartmentsDao.getAll());
+            }
+            else {
+                return "{\"message\":\"Sorry no departments currently listed on database.\"}";
+            }
+        });
+        //path to get listed general news
+        get("/news/general","application/json",(request, response) -> {
+            if(sql2oNewsDao.getAll().size()>0){
+                return gson.toJson(sql2oNewsDao.getAll());
+            }
+            else {
+                return "{\"message\":\"Sorry,no news currently listed.\"}";
             }
         });
 
