@@ -111,7 +111,7 @@ public class App {
             }
         });
         //path to get listed general news
-        get("/news/general","application/json",(request, response) -> {
+        get("/news/general","application/json",(request, response) -> {//tested.....works!!
             if(sql2oNewsDao.getAll().size()>0){
                 return gson.toJson(sql2oNewsDao.getAll());
             }
