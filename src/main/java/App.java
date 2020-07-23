@@ -116,7 +116,7 @@ public class App {
                 return gson.toJson(sql2oNewsDao.getAll());
             }
             else {
-                return "{\"message\":\"Sorry,no news currently listed.\"}";
+                return "{\"RESPONSE\":\"NO NEWS AVAILABLE\"}";
             }
         });
         //path to get each user department
