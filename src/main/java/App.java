@@ -129,6 +129,7 @@ public class App {
               return "{\"RESPONSE\":\"DEPARTMENT NOT AVAILABLE\"}";
            }
         });
+      //getting specific user..................
         get("/user/:id", "application/json", (request, response) -> {//tested and works...........
             int id=Integer.parseInt(request.params("id"));
             if(sql2oUsersDao.findById(id)==null){
@@ -139,7 +140,7 @@ public class App {
                 return gson.toJson(sql2oUsersDao.findById(id));
             }
         });
-        get("/department/:id/users","application/json",(request, response) -> {
+        get("/department/:id/users","application/json",(request, response) -> {//tested works............
             int id=Integer.parseInt(request.params("id"));
             if(sql2oDepartmentsDao.getAllUsersInDepartment(id).size()>0){
                 return gson.toJson(sql2oDepartmentsDao.getAllUsersInDepartment(id));
