@@ -126,7 +126,7 @@ public class App {
                return gson.toJson(sql2oUsersDao.getAllUserDepartments(id));
            }
            else {
-              return "{\"message\":\"Sorry,user currently has no department\"}";
+              return "{\"RESPONSE\":\"DEPARTMENT NOT AVAILABLE\"}";
            }
         });
         get("/user/:id", "application/json", (request, response) -> {//tested and works...........
