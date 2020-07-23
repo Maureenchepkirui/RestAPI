@@ -120,15 +120,15 @@ public class App {
             }
         });
 //        //path to get each user department
-//        get("/user/:id/departments","application/json",(request, response) -> {
-//            int id=Integer.parseInt(request.params("id"));
-//            if(sql2oUsersDao.getAllUserDepartments(id).size()>0){
-//                return gson.toJson(sql2oUsersDao.getAllUserDepartments(id));
-//            }
-//            else {
-//                return "{\"message\":\"Sorry,user currently has no department\"}";
-//            }
-//        });
+      get("/user/:id/departments","application/json",(request, response) -> {//tested ......works
+           int id=Integer.parseInt(request.params("id"));
+          if(sql2oUsersDao.getAllUserDepartments(id).size()>0){
+               return gson.toJson(sql2oUsersDao.getAllUserDepartments(id));
+           }
+           else {
+              return "{\"message\":\"Sorry,user currently has no department\"}";
+           }
+        });
         get("/user/:id", "application/json", (request, response) -> {//tested and works...........
             int id=Integer.parseInt(request.params("id"));
             if(sql2oUsersDao.findById(id)==null){
