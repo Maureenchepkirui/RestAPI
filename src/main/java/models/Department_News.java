@@ -15,11 +15,13 @@ public class Department_News extends News {
 
     @Override
     public String getNews_type() {
+
         return news_type;
     }
 
     @Override
     public int getDepartment_id() {
+
         return department_id;
     }
 }
