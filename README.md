@@ -85,7 +85,7 @@ Change databse creadentials to your credentials in the App.java and in the tests
  }
  
  
- #News
+ # News
   
   #### Creating General News 
  { \
