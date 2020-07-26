@@ -69,6 +69,36 @@ Change databse creadentials to your credentials in the App.java and in the tests
 | /department/:id                              |GET |     Get specific departments|
 | /news/department/:id                         |GET |    Get news from a specific department|
 
+### User
+* Creating user
+{ \
+  "name":"Maureen"\
+  "position":"Manager",\
+  "staff_role":"Editor"\
+ }
+ 
+ ### Departments
+ * Creating Departments  
+{ \
+  "name":"Editing",\
+  "description":"Editing of books"\
+ }
+ #News
+  
+  #### Creating General News 
+ { \
+   "title":"Meeting",\
+   "description":"Discussion about expanding",\
+   "user_id":1 \
+  }
+  #### Creating Department News 
+  
+  { \
+    "title":"Meeting",\
+    "description":"Discussion about expanding",\
+    "department_id":1, \
+    "user_id":1 \
+   }
 
 ## CONTACT DETAILS
 ````

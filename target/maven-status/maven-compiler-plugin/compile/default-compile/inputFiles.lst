@@ -1,0 +1,12 @@
+/home/maureenbett/Documents/OrganisationalNewsPortal/src/main/java/models/Department_News.java
+/home/maureenbett/Documents/OrganisationalNewsPortal/src/main/java/dao/Sql2oNewsDao.java
+/home/maureenbett/Documents/OrganisationalNewsPortal/src/main/java/dao/Sql2oDepartmentsDao.java
+/home/maureenbett/Documents/OrganisationalNewsPortal/src/main/java/App.java
+/home/maureenbett/Documents/OrganisationalNewsPortal/src/main/java/models/Departments.java
+/home/maureenbett/Documents/OrganisationalNewsPortal/src/main/java/dao/DepartmentsDao.java
+/home/maureenbett/Documents/OrganisationalNewsPortal/src/main/java/dao/NewsDao.java
+/home/maureenbett/Documents/OrganisationalNewsPortal/src/main/java/models/Users.java
+/home/maureenbett/Documents/OrganisationalNewsPortal/src/main/java/exceptions/ApiException.java
+/home/maureenbett/Documents/OrganisationalNewsPortal/src/main/java/models/News.java
+/home/maureenbett/Documents/OrganisationalNewsPortal/src/main/java/dao/UsersDao.java
+/home/maureenbett/Documents/OrganisationalNewsPortal/src/main/java/dao/Sql2oUsersDao.java

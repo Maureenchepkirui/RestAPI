@@ -1,0 +1,12 @@
+models/Department_News.class
+dao/DepartmentsDao.class
+models/Users.class
+models/News.class
+dao/UsersDao.class
+models/Departments.class
+dao/Sql2oUsersDao.class
+exceptions/ApiException.class
+dao/Sql2oDepartmentsDao.class
+App.class
+dao/Sql2oNewsDao.class
+dao/NewsDao.class
