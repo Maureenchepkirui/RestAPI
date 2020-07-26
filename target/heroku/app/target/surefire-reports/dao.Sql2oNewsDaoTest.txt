@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: dao.Sql2oNewsDaoTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.382 sec <<< FAILURE! - in dao.Sql2oNewsDaoTest
+getAll(dao.Sql2oNewsDaoTest)  Time elapsed: 0.178 sec  <<< ERROR!
+org.sql2o.Sql2oException: 
+Database error: ERROR: syntax error at or near "RETURNING"
+  Position: 20
+	at dao.Sql2oNewsDaoTest.getAll(Sql2oNewsDaoTest.java:90)
+Caused by: org.postgresql.util.PSQLException: 
+ERROR: syntax error at or near "RETURNING"
+  Position: 20
+	at dao.Sql2oNewsDaoTest.getAll(Sql2oNewsDaoTest.java:90)
+
